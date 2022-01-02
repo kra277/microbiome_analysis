@@ -1,0 +1,51 @@
+# Installation
+
+## Mini conda or anaconda
+
+### Note: On the Aouizerat mac anaconda was installed
+
+
+## Update anaconda
+
+conda update --prefix /opt/anaconda3 anaconda
+
+
+## Update conda (This should be updated, but just run it again)
+
+conda update conda
+
+
+## Install wget
+
+conda install wget
+
+
+## Download the latest qiime2
+wget https://data.qiime2.org/distro/core/qiime2-2021.11-py38-osx-conda.yml
+
+
+## Create the QIIME2 environment
+
+conda env create -n qiime2-2021.11 --file qiime2-2021.11-py38-osx-conda.yml
+
+### OPTIONAL CLEANUP
+rm qiime2-2021.11-py38-osx-conda.yml
+
+
+## Activate the conda environment
+conda activate qiime2-2021.11
+
+
+## Check if Qiime is installed correctly
+qiime --help
+
+### Should show the possible options and usage
+
+
+## If using Bash, Run this command to enable tab completion:
+source tab-qiime
+
+
+## for zsh
+
+#### autoload bashcompinit && bashcompinit && source tab-qiime
